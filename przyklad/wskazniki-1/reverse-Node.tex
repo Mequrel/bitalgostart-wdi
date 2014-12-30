@@ -1,0 +1,52 @@
+\documentclass[
+fontsize=12pt %
+,english %
+,headinclude %
+,headsepline % line between head an document text
+%,BCOR=12mm %
+]{scrbook} % twosided, A4 paper
+\usepackage[T1]{fontenc}
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\usepackage[french,polutonikogreek,polish]{babel}
+%\geometry{verbose,a4paper,tmargin=3cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
+\usepackage{blindtext} % provides blindtext with sectioning
+\usepackage{scrpage2} % header and footer for KOMA-Script
+\usepackage{graphicx}
+\clearscrheadfoot % deletes header/footer
+\pagestyle{scrheadings} % use following definitions for header/footer
+% definitions/configuration for the header
+\rehead[]{\Large \textbf{BitAlgo Start}} % equal page, right position (inner)
+\lohead[]{\Large \textbf{BitAlgo Start}} % odd page, left position (inner)
+\cehead[]{Zadanie 1:\\Odwróæ listê jednokierunkow¹}
+\cohead[]{Zadanie 1:\\Odwróæ listê jednokierunkow¹}
+\lehead[]{\includegraphics[width=15mm]{logo.png}} % equal page, left (outer) position
+\rohead[]{\includegraphics[width=15mm]{logo.png}}
+% definitions/configuration for the footer
+\cofoot[\pagemark]{\pagemark} % odd page, center position
+\begin{document}
+\vspace{50 mm}
+\hspace{50 mm}
+\newline
+\par{\Large \textbf{Zadanie 1: Odwróæ listê jednokierunkow¹}} \\ \\
+Twoim zadaniem jest zaimplementowanie funkcji Node * reverse(Node *head), która odwraca zadan¹ listê jednokierunkow¹.
+\\ \\
+\par{\Large \textbf{Format wejœcia}} \\ \\
+Pierwsza linia wejœcia zawiera liczbê ca³kowit¹ $n$, $1 \leq n \leq 2^{15}$ - iloœæ elementów listy. W kolejnej linii znajduje siê dok³adnie $n$ liczb oddzielonych spacj¹, które stanowi¹ wartoœci elementów listy. Liczby te s¹ z przedzia³u $[-2^{15}; 2^{15}]$.
+\\ \\
+\par{\Large \textbf{Format wyjœcia}} \\ \\
+Na wyjœciu powinny zostaæ wypisane wartoœci listy w odwrotnej kolejnoœci. Ka¿dy element powinien byæ oddzielony spacj¹.
+\\ \\
+\par{\Large \textbf{Przyk³ad}} \\ \\
+\begin{tabular}{ p{7cm} p{7cm} }
+Dla danych wejœciowych: \hspace{40mm}& Poprawn¹ odpowiedzi¹ jest \\
+& \\
+% define input here
+10 \newline
+9 8 11 20 3 1 9 5 9 10 \newline
+&
+% define output here
+10 9 5 9 1 3 20 11 8 9 \newline
+\\
+\end{tabular}
+\end{document}
